@@ -3,7 +3,7 @@
 A tiny MVP that downloads the top 5 non-NSFW images from r/ProgrammerHumor (top of day) into your Windows downloads folder.
 
 ## What this repo contains ✅
-- `scripts/download_reddit_memes.sh` — the single bash script that downloads the top images (MVP)
+- `download_reddit_memes.sh` — the single bash script that downloads the top images (MVP)
 - `SCHEDULING.md` — short instructions for running the script daily on Windows (WSL or Git Bash)
 - `README.md`, `LICENSE`, and `.gitignore` — minimal project metadata
 

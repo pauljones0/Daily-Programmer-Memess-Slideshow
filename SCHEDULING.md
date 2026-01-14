@@ -3,10 +3,10 @@ Scheduling notes (Windows 11)
 Two easy ways to run the bash script once per day on Windows:
 
 1) Git Bash (recommended if you have Git for Windows)
-- Place `download_reddit_memes.sh` somewhere under `C:\Users\<you>\scripts\` and convert path to MSYS style if needed (script handles common Windows paths).
+- Place `download_reddit_memes.sh` in the repository root and convert path to MSYS style if needed (the script handles common Windows paths).
 - Task Scheduler example (create a daily task):
   - Program/script: "C:\Program Files\Git\bin\bash.exe"
-  - Add arguments: -lc "/c/Users/<you>/scripts/download_reddit_memes.sh"
+  - Add arguments: -lc "/c/Users/<you>/path/to/repo/download_reddit_memes.sh"
 
 2) WSL (recommended if you use WSL)
 - Put the script in your WSL home or make sure the Windows path is accessible via WSL.
