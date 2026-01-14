@@ -13,6 +13,19 @@ Two easy ways to run the bash script once per day on Windows:
 - Example schtasks command (run as Administrator):
   schtasks /Create /SC DAILY /TN "DownloadRedditMemes" /TR "wsl -u <yourlinuxuser> bash -lc '/home/<yourlinuxuser>/download_reddit_memes.sh'" /ST 09:00
 
+3) Windows (Task Scheduler - Git Bash)
+- Use Task Scheduler to run the script daily using Git Bash (no WSL needed).
+- GUI example:
+  - Open Task Scheduler -> Create Task
+  - Name: DownloadRedditMemes
+  - Trigger: Daily at your preferred time
+  - Action -> Start a program:
+    - Program/script: "C:\Program Files\Git\bin\bash.exe"
+    - Add arguments: -lc "/c/Users/z00557ab/path/to/repo/download_reddit_memes.sh"
+    - Start in: "C:\Program Files\Git\bin"
+- schtasks CLI example (run as Admin):
+  schtasks /Create /SC DAILY /TN "DownloadRedditMemes" /TR "\"C:\\Program Files\\Git\\bin\\bash.exe\" -lc \"/c/Users/z00557ab/path/to/repo/download_reddit_memes.sh\"" /ST 09:00
+
 Testing
 - Run the script once manually to confirm: 
   - In Git Bash: `./download_reddit_memes.sh`
